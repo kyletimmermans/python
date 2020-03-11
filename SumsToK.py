@@ -6,7 +6,6 @@ compiled in python 3.7.3
 Self-reminder: Inner-most loop executes all the way through first
 '''
 
-import random
 import time
 import sys
 
@@ -116,7 +115,7 @@ print('Testing subsets add up to 100: ')
 PrintSubsetsAddupToK(test_set, 100)
 print(' ') # Formatting
 print(' ')
-print('2. Measuring the three sorting algorithms with randomly generated inputs of varying size')
+print('2. Measuring the three sorting algorithms with test sets of varying sizes')
 print(' ') # Formatting
 print('3. Summary of measurement result:')
 print(' ')

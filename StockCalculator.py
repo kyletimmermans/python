@@ -15,7 +15,8 @@ def stocksCalculation(arr):
     print("Within these "+str(len(arr))+" days, buying this stock on day "+str(buy)+" and selling on day "+str(sell)+" yields the highest return of "+str(max))
 
 
-def stocksInput(arr):
+def stocksInput():
+    arr = []  # Store stock values per day
     print("\nKeep entering a stock's value for each day it is live, once you're done, type q or Q\n")
     day = 1
     while True:
@@ -29,5 +30,4 @@ def stocksInput(arr):
 
 
 # Driver
-stocks = []  # Store stock values
-stocksCalculation(stocksInput(stocks))
+stocksCalculation(stocksInput())

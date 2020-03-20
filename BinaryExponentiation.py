@@ -18,7 +18,8 @@ def exponential(a, n):  # a = base, n = exponent
             return exponential(a, int(n / 2)) * exponential(a, int(n / 2)) * a  # e.g. 2^5 = (2^2) * (2^2) * (2^1) and using int to divide odd number in half
 
 
-exponential(2, 10)  # Returns 1024
+a = int(input("Enter exponent number for 2 to be the base of e.g. 5 for 2^5, 10 for 2^10: "))  # Input exponent
+print(exponential(2, a))  # Returns final number
 
 # Essentially the end computation is: a * a * a * a * a * a * a * a * a * a
 

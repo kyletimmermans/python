@@ -3,6 +3,8 @@ Kyle Timmermans
 05/8/20
 Search for specific words in a document
 Inspired by question on Algorithms Final
+
+Note: range() does not hit final element, e.g. for j in range(1, m), will never hit m, always m-1
 '''
 
 
@@ -12,7 +14,7 @@ def SearchPattern(input, word):
     m = len(word)
     for i in range(0, n):
         if input[i] == word[0]:  # Start checking the rest of the input, if the first letter matches the target word
-            for j in range(1, m):  # For the length of the target word e.g. "o o d" in "good", m never fully reached
+            for j in range(1, m):  # For the length of the target word e.g. "o o d" in "good", #(m never fully reached, always m-1)#
                 if input[i+j] == word[j]:  # Keep checking the next letter in the text to see if matches the target word
                     if input[i+j] == word[j] and j == m-1:   # Did it match the whole word?  -1 needed, first letter already checked
                         found.append(i)  # return index of first letter of the word in the given string that matches target word

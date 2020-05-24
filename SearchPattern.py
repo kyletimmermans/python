@@ -13,11 +13,12 @@ def SearchPattern(input, word):
     n = len(input)
     m = len(word)
     for i in range(0, n):
-        if input[i] == word[0]:  # Start checking the rest of the input, if the first letter matches the target word
+        if input[i] == word[0]:  # Check if the letters of both words are the same, if true, continue checking the word
             for j in range(1, m):  # For the length of the target word e.g. "o o d" in "good", #(m never fully reached, always m-1)#
-                if input[i+j] == word[j]:  # Keep checking the next letter in the text to see if matches the target word
-                    if input[i+j] == word[j] and j == m-1:   # Did it match the whole word?  -1 needed, first letter already checked
-                        found.append(i)  # return index of first letter of the word in the given string that matches target word
+                if input[i+j] != word[j]:  # if at least one letter doesn't match, go to next word
+                    break
+                elif input[i+j] == word[j] and j == m-1:  # 'j == m-1'  check if the final letter of both words match
+                    found.append(i)   # return index of first letter of the word in the given string that matches target word
     if len(found) == 0:
         return -1  # If target not found at all, return -1
     else:

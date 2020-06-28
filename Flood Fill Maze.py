@@ -81,6 +81,3 @@ def print_maze(maze):
 
 # Driver
 print_maze(traverse(test_maze))  # Print the returned traversed maze
-
-
-

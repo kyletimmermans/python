@@ -1,6 +1,28 @@
 #!/usr/bin/env python3
 
 
+'''
+
+Shift Left
+
+|---------------------------|
+|                           |
+|                           V
+1, 2, 3, 4, 5, 6, 7, 8, 9, 10
+   <---------------------
+
+
+Shift Right
+
+|---------------------------|
+|                           |
+V                           |
+1, 2, 3, 4, 5, 6, 7, 8, 9, 10
+   --------------------->
+
+'''
+
+
 def shift_array(arr: list[any], direction: str, distance: int) -> list[any]:
 	if direction != "left" and direction != "right":
 		print("Direction must be 'left' or 'right'!")
@@ -29,9 +51,8 @@ def shift_array(arr: list[any], direction: str, distance: int) -> list[any]:
 	return final_arr
 
 
+print(shift_array([1, 2, 3, 4], "left", 1))
+print(shift_array([1, 2, 3, 4], "left", 2))
 
 print(shift_array([1, 2, 3, 4], "right", 1))
 print(shift_array([1, 2, 3, 4], "right", 2))
-
-print(shift_array([1, 2, 3, 4], "left", 1))
-print(shift_array([1, 2, 3, 4], "left", 2))
